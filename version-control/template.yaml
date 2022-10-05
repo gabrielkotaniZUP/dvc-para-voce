@@ -1,0 +1,19 @@
+name: version-control
+description: New envrionment for version control
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
+
+hooks:
+  - type: run
+    trigger: after-render
+    linux:
+      - pip install --no-cache-dir -r requirements.txt
+    windows:
+      - cmd /c pip install --no-cache-dir -r requirements.txt
+    mac:
+      - pip install --no-cache-dir -r requirements.txt
