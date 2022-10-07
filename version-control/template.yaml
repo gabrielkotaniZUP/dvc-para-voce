@@ -6,7 +6,8 @@ inputs:
   - label: Project name
     type: text
     name: project_name
-    default: project-name
+    required: true
+
 hooks:
   - type: run
     trigger: after-render
