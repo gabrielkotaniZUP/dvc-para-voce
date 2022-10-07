@@ -3,6 +3,8 @@ name: dvc-para-voce
 display-name: dvc-para-voce
 picture: stack.png
 category: Backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category
+types:
+  - app-template
 compatibility: # Put a list of technologies compatible with the stack
   - Python
 technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies 
