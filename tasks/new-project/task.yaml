@@ -1,0 +1,43 @@
+name: new-project
+description: Create the folders and readme for a new project
+inputs:
+  - label: Nome do projeto
+    type: text
+    name: name_projeto
+    required: true
+  - label: Estado do projeto
+    type: text
+    name: state_project
+    items:
+      - Desenvolvimento
+      - Usar
+      - Depreciado
+    required: true
+  - label: Maturidade
+    type: text
+    name: maturity_project
+    items:
+      - Experimentos
+      - Desenvolvimento
+      - QA
+      - Homologação
+      - Produção
+    required: true
+  - label: Descrição
+    tye: text
+    name: description_project
+    required: truepe
+  - label: Path
+    type: text
+    name: src_path
+supported-os:
+- windows
+- linux
+- mac
+command:
+- linux:  |
+    ./add.sh
+- mac: |
+    sh ./add.sh
+- windows: |
+    cmd /c ./add.sh
