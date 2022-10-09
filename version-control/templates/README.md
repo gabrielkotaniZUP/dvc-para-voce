@@ -1,6 +1,13 @@
+# {{name_project}}
 
-## Jinja
+Projetos de Data Science
 
-You can use jinja to make a template-data folder more dynamic.
+## Estrutura:
++ data
++ models
++ notebooks
++ pipelines
 
-complete documentation of jinja: https://jinja.palletsprojects.com/en/3.0.x/templates/
+## Projetos:
+| projeto | estado | maturidade | descrição | linguagem | última atualização |
+|--:|:-:|:-:|---|:-:|---|

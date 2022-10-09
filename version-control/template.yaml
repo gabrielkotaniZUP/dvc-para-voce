@@ -5,9 +5,8 @@ types:
 inputs:
   - label: Project name
     type: text
-    name: project_name
+    name: name_project
     required: true
-
 hooks:
   - type: run
     trigger: after-render
@@ -17,3 +16,13 @@ hooks:
       - cmd /c pip install --no-cache-dir -r requirements.txt
     mac:
       - pip install --no-cache-dir -r requirements.txt
+  - type: edit
+    trigger: after-render
+    path: README.md
+    changes:
+      - search:
+          string: "|--:|:-:|:-:|---|:-:|---|"
+          replace-by:
+            value: "|--:|:-:|:-:|---|:-:|---|\n
+            |**{{name_project}}**|`Usar`|**experimentos**|Demonstração de uso de pastas| | 2022-10-09| 
+            "
