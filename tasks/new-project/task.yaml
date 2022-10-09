@@ -4,40 +4,40 @@ inputs:
   - label: Nome do projeto
     type: text
     name: name_projeto
-    required: true
+    default: new_project
+    required: 'true'
   - label: Estado do projeto
     type: text
     name: state_project
+    required: 'true'
     items:
       - Desenvolvimento
       - Usar
       - Depreciado
-    required: true
-  - label: Maturidade
+  - label: Fase
     type: text
-    name: maturity_project
+    name: phase_project
+    required: 'true'
     items:
       - Experimentos
       - Desenvolvimento
       - QA
       - Homologação
       - Produção
-    required: true
-  - label: Descrição
-    tye: text
-    name: description_project
-    required: truepe
-  - label: Path
+  - label: Linguagens
     type: text
-    name: src_path
+    name: languages_project
+    required: 'true'
+  - label: Descrição
+    type: text
+    name: description_project
+    required: 'true'
+  - label: Usar padrao?
+    type: bool
+    name: default
 supported-os:
-- windows
-- linux
 - mac
-command:
-- linux:  |
-    ./add.sh
-- mac: |
-    sh ./add.sh
-- windows: |
-    cmd /c ./add.sh
+command: sh tasks/add.sh {{default}} {{name_projeto}} {{state_project}} {{phase_project}} "{{description_project}}" "{{languages_project}}"
+  # - linux:  ./add.sh
+  # - mac: sh ./add.sh
+  # - windows: cmd /c ./add.sh
